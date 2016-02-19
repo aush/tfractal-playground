@@ -4,34 +4,7 @@
   "version": "1.0.0",
   "description": "Playground for the react-tfractal component",
   "scripts": {
-    "start": "better-npm-run start",
-    "dev": "better-npm-run dev",
-    "prod": "better-npm-run prod",
-    "server": "babel src/server.js --out-file dist/server.js --babelrc=false --plugins=transform-async-to-generator"
-  },
-  "betterScripts": {
-    "start": {
-      "command": "node dist/server.js",
-      "env": {
-        "NODE_ENV": "production",
-        "PORT": 8080
-      }
-    },
-    "dev": {
-      "command": "node devServer/devServer.js",
-      "env": {
-        "NODE_ENV": "development",
-        "PORT": 3000
-      }
-    },
-    "prod": {
-      "command": "webpack --display-error-details --progress --config webpack.config.prod.js",
-      "env": {
-        "NODE_ENV": "production",
-        "PORT": 8080,
-        "UV_THREADPOOL_SIZE": 100
-      }
-    }
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -56,7 +29,6 @@
   "homepage": "https://github.com/aush/tfractal-playground",
   "dependencies": {
     "babel-polyfill": "^6.5.0",
-    "better-npm-run": "0.0.7",
     "color": "^0.11.1",
     "koa": "^2.0.0-alpha.3",
     "koa-send": "^3.1.0",
