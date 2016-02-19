@@ -6,8 +6,11 @@ global-reset()
   {$main-font}
 
 :global #app
-  relative
   size: 100vw 100vh
+
+.app-container
+  relative
+  size: 100%
   background: $bgcolor
 
 $m = 3vh
@@ -30,3 +33,17 @@ $m = 3vh
   max-height: 88vh
   width: 20vw
   overflow: auto
+
+$linkcolor = #00B8D4
+.about-me
+  absolute: bottom 3px right 3px
+  color: white
+  font-size: 90%
+  a:link
+  a:visited
+    color: $linkcolor
+    text-decoration: none
+  a:hover
+  a:active
+    color: $linkcolor
+    text-decoration: underline

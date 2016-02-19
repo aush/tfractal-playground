@@ -30,42 +30,47 @@ import {
 class App extends React.Component {
   render() {
     return (
-      <Paper
-        rounded={false}
-        style={{ ...this.props.style }}
-        styleName="tfractal-paper"
-        zDepth={5}
-      >
-        <LocationHash
-          value={encodeConfiguration(this.props.configuration)}
-        />
-        <Tfractal
-          styleName="tfractal"
-          {...normalizeConfiguration(this.props.configuration)}
+      <div styleName="app-container">
+        <Paper
+          rounded={false}
+          style={{ ...this.props.style }}
+          styleName="tfractal-paper"
+          zDepth={5}
         >
-          <div
-            onClick={() => this.props.generateRandom()}
-            styleName="random"
+          <LocationHash
+            value={encodeConfiguration(this.props.configuration)}
           />
-          <Paper
-            rounded={false}
-            styleName="configurator-paper"
-            zDepth={5}
+          <Tfractal
+            styleName="tfractal"
+            {...normalizeConfiguration(this.props.configuration)}
           >
-            <Configurator
-              {...this.props.configuration}
-              {...this.props.ui}
-              changeColorMap={this.props.changeColorMap}
-              changeLayers={this.props.changeLayers}
-              changePalette={this.props.changePalette}
-              changeSize={this.props.changeSize}
-              openLayers={this.props.openLayers}
-              openPalette={this.props.openPalette}
-              openSize={this.props.openSize}
+            <div
+              onClick={() => this.props.generateRandom()}
+              styleName="random"
             />
-          </Paper>
-        </Tfractal>
-      </Paper>
+            <Paper
+              rounded={false}
+              styleName="configurator-paper"
+              zDepth={5}
+            >
+              <Configurator
+                {...this.props.configuration}
+                {...this.props.ui}
+                changeColorMap={this.props.changeColorMap}
+                changeLayers={this.props.changeLayers}
+                changePalette={this.props.changePalette}
+                changeSize={this.props.changeSize}
+                openLayers={this.props.openLayers}
+                openPalette={this.props.openPalette}
+                openSize={this.props.openSize}
+              />
+            </Paper>
+          </Tfractal>
+        </Paper>
+        <div styleName="about-me">
+          created by <a href="https://github.com/aush">aush</a>
+        </div>
+      </div>
     );
   }
 }
