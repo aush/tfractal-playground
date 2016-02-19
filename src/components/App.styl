@@ -1,0 +1,32 @@
+@require './common-styles'
+
+global-reset()
+
+:global body
+  {$main-font}
+
+:global #app
+  relative
+  size: 100vw 100vh
+  background: $bgcolor
+
+$m = 3vh
+.tfractal-paper
+  absolute: top $m right $m bottom $m left $m
+
+.tfractal
+  position: relative
+  size: 100%
+
+.random
+  absolute: bottom 8px left 0
+  size: 80px
+  background-image: url(../../assets/random.png)
+  background-repeat: no-repeat
+  cursor: pointer
+
+.configurator-paper
+  absolute: top $m right $m
+  max-height: 88vh
+  width: 20vw
+  overflow: auto

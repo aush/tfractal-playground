@@ -1,0 +1,21 @@
+.header
+  padding: 0.5rem
+  background-color: #EDE7F6
+  background-position: right
+  background-repeat: no-repeat
+  cursor: pointer
+
+.header-open
+  @extends .header
+  background-image: url(../../../assets/arrow_up.png)
+
+.header-closed
+  @extends .header
+  background-image: url(../../../assets/arrow_down.png)
+
+.content-open
+  height: auto
+
+.content-closed
+  height: 0
+  overflow: hidden
