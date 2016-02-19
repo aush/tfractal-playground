@@ -97,5 +97,8 @@
     "react-tfractal": "^1.1.5",
     "recompose": "^0.15.0",
     "redux": "^3.3.1"
+  },
+  "engines": {
+    "node": ">=5.2.0"
   }
 }
